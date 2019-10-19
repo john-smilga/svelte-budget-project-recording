@@ -1,0 +1,344 @@
+/* 
+====== 
+Fonts
+======
+*/
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300,400&display=swap");
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+  --primaryColor: #2892d7;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+}
+/* 
+====== 
+Global Styles 
+======
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainGrey);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Catamaran", sans-serif;
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--mainSpacing);
+}
+p {
+  margin-bottom: 1.25rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+/* 
+====== 
+Buttons 
+======
+*/
+.btn,
+.btn-white,
+.btn-primary {
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: var(--mainBorderRadius);
+  background: transparent;
+}
+.btn:hover {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+}
+.btn-white {
+  background: transparent;
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.btn-white:hover {
+  background: var(--mainWhite);
+  color: var(--primaryColor);
+}
+.btn-primary {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border-color: var(--primaryColor);
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+.btn-block {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: var(--lightShadow);
+}
+.disabled {
+  color: var(--darkGrey);
+  border-color: var(--darkGrey);
+}
+.disabled:hover {
+  background: transparent;
+  color: var(--darkGrey);
+  border-color: var(--darkGrey);
+}
+/* 
+====== 
+Navbar
+======
+*/
+.nav {
+  background: var(--primaryColor);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--lightShadow);
+}
+
+.nav-center {
+  width: 85%;
+  max-width: 35rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-title {
+  text-transform: capitalize;
+  color: var(--mainWhite);
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+.nav-btn {
+  background: transparent;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: var(--mainTransition);
+}
+.nav-btn:hover {
+  color: var(--darkGrey);
+}
+/* 
+====== 
+Content 
+======
+*/
+.content {
+  padding: 3rem 0;
+  width: 85vw;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+/* 
+====== 
+Main Title 
+======
+*/
+.main-title {
+  text-transform: capitalize;
+  color: var(--primaryColor);
+  margin-bottom: 2rem;
+}
+/* 
+====== 
+Single Expense
+======
+*/
+.single-expense {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.3rem 1rem;
+  border-radius: var(--mainBorderRadius);
+  background: var(--mainWhite);
+  box-shadow: var(--lightShadow);
+}
+.single-expense h2 {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.single-expense h4 {
+  margin-bottom: 0;
+  margin-top: 1rem;
+  font-weight: 300;
+  color: var(--primaryColor);
+}
+
+.expense-btn {
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  margin: 0 0.4rem;
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+.expense-btn:hover {
+  transform: scale(1.2);
+}
+.amount-btn {
+  font-size: 1.3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+.delete-btn {
+  color: red;
+}
+.edit-btn {
+  color: green;
+}
+/* 
+====== 
+Expense Form
+======
+*/
+
+.expense-form {
+  background: var(--mainWhite);
+  padding: 1.25rem 1rem;
+  text-transform: capitalize;
+  border-radius: var(--mainBorderRadius);
+  box-shadow: var(--lightShadow);
+}
+
+.form-control label {
+  display: block;
+}
+.form-control input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--darkGrey);
+  margin-bottom: 1.25rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.form-empty {
+  text-align: center;
+  color: red;
+}
+.form {
+  position: relative;
+  margin-bottom: 5rem;
+}
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  width: 4.2rem;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+/* 
+====== 
+Modal
+======
+*/
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+.modal-content {
+  background: var(--mainWhite);
+  width: 85vw;
+  max-width: 35rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 3rem;
+  border-radius: var(--mainBorderRadius);
+  position: relative;
+}
+.modal-content .expense-form {
+  box-shadow: none;
+}
+.modal-container .form {
+  margin-bottom: 0;
+}
+.modal-container .expense-form {
+  padding: 1.25rem 0;
+}
+.modal-container .form {
+  position: static;
+}
+.modal-container .close-btn {
+  top: 2%;
+  right: 3%;
+}
+/* 
+====== 
+Github Users
+======
+*/
+
+.user {
+  margin: 2rem 0;
+  box-shadow: var(--lightShadow);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-radius: var(--mainBorderRadius);
+  grid-column-gap: 2rem;
+  background: var(--mainWhite);
+}
+.user img {
+  width: 6rem;
+  border-top-left-radius: var(--mainBorderRadius);
+  border-bottom-left-radius: var(--mainBorderRadius);
+}
+.user-info {
+  padding-top: 0.75rem;
+}
+.user-info h3 {
+  margin-bottom: 0.75rem;
+}
