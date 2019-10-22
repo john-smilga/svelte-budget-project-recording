@@ -21,7 +21,6 @@
       {name}
       <button class="amount-btn" on:click={toggleAmount}>
         <i class="fas fa-caret-down" />
-        toggle
       </button>
     </h2>
     {#if displayAmount}
@@ -37,11 +36,10 @@
       class="expense-btn edit-btn"
       on:click={() => setModifiedExpense(id)}>
       <i class="fas fa-pen" />
-      edit
     </button>
     <button class="expense-btn delete-btn" on:click={() => removeExpense(id)}>
       <i class="fas fa-trash" />
-      delete
+
     </button>
 
   </div>
